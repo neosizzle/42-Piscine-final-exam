@@ -49,6 +49,7 @@ void	infin_mult (char *nb1, char *nb2)
 	if (!*nb1 || *nb1 == '0' || !*nb2 || *nb2 == '0')
 	{
 		ft_putchar('0');
+		ft_putchar('\n');
 		return ;
 	}
 	if (*nb1 == '-')
