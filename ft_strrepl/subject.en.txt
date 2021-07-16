@@ -1,0 +1,12 @@
+Assignment name  : ft_strrepl
+Expected files   : ft_strrepl.c
+Allowed functions: 
+--------------------------------------------------------------------------------
+
+Write a function that replace character c1 by character c2 in str by modifying it.
+
+It must return str.
+
+Your function must be declared as follows:
+
+char    *ft_strrepl(char *str, char c1, char c2);
