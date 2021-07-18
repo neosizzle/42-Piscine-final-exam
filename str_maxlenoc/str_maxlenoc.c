@@ -1,5 +1,6 @@
 #include <unistd.h>
 
+//helper func to help determine the length of the string
 int	ft_strlen(char *str)
 {
 	int	res;
@@ -10,6 +11,11 @@ int	ft_strlen(char *str)
 	return (res);
 }
 
+//helper function to find a substring of n characters in the haystack
+//1. while haystack is not end and while we havent found our match, do sth
+//	-if the current hasystack character is not equal to needle character
+//	- set success flag to 0 and break
+//	- do this until n characters in compared
 int	ft_strnstr(char *haystack, char *needle, int n)
 {
 	int	success;
@@ -37,6 +43,15 @@ int	ft_strnstr(char *haystack, char *needle, int n)
 	return (success);
 }
 
+//VARIABLES
+//maxlen = the maximum length of the common sunstring
+//res_start = the starting pointer of the result (longest common substring)
+//res_end = the end pointer of the result (longest common substring)
+//curr_start = the current starting pointer 
+//curr_end = the current ending pointer
+//success = a flag that indicates if the substring is found at all words
+//first_str = the string that we will be refrencing
+//next_word = the word that we will be searching the substr in
 int	main(int argc, char *argv[])
 {
 	int	maxlen;
