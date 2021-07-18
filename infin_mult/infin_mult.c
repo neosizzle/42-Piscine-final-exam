@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include "ftstr.h"
 
+//helper function to populate a string with the multiplication of 2 digits
+//1 . calculate the unit index, notmally it would be the iddex of the first num + 2nd num (decrement)
+//2 . get the change index, normally unit index - 1;
+//3. multiply both numbers tgt and store them in unit
+//4. bring the change to change
+//5. the remainder of the change carries over to the unit
 void	do_mult(char *res, int idx_n1, int idx_n2, char n1, char n2)
 {
 	int	unit_idx;
@@ -14,6 +20,9 @@ void	do_mult(char *res, int idx_n1, int idx_n2, char n1, char n2)
 	res[unit_idx] %= 10;
 }
 
+//helper that would generate a multiplied string and return said string
+//1. initialize string with default values 
+//2. start populating the string with multiplied numbers digit by digit
 char	*gen_mult(char *n1, char *n2)
 {
 	int	idx_n1;
